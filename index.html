@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Residência 83,26 m² · padrão médio</title>
+<meta name="description" content="Residência térrea de 83,26 m² em lote 6 × 30, padrão médio. Projeto INFINITI Engenharia e Construtora.">
+<meta property="og:title" content="Residência 83,26 m² · padrão médio · INFINITI Engenharia">
+<meta property="og:description" content="Casa térrea contemporânea em lote 6 × 30: fachada, planta, ambientes e acabamentos.">
+<meta property="og:image" content="https://nathan-kennedy.github.io/casa83-padrao-medio/img/fachada-frente.jpg">
+<meta property="og:url" content="https://nathan-kennedy.github.io/casa83-padrao-medio/">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/logo-infiniti.png">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,400;112,600;125,700&family=Spline+Sans:wght@400;500&display=swap">
+<style>
+/* Layout: pagina de apresentacao de projeto, como um caderno de arquitetura: imagem grande, legendas tecnicas (m2, materiais, marcas),
+   secoes por parte da casa. Paleta tirada da propria casa: reboco off-white, taupe do portico, areia do travertino, preto das esquadrias. */
+:root {
+  --reboco: #f5f2ec;
+  --papel: #fbfaf7;
+  --tinta: #1d1c1a;
+  --tinta-2: #5f5a52;
+  --taupe: #8c8174;
+  --travertino: #cdb894;
+  --linha: #e2ddd3;
+  --oliva: #6d7350;
+  --f-titulo: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-texto: "Spline Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --reboco: #161513; --papel: #1d1c19; --tinta: #f1ede6; --tinta-2: #b4ada2; --taupe: #a99d8e; --travertino: #d8c4a0; --linha: #34312c; --oliva: #a3a97f; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --reboco: #161513; --papel: #1d1c19; --tinta: #f1ede6; --tinta-2: #b4ada2; --taupe: #a99d8e; --travertino: #d8c4a0; --linha: #34312c; --oliva: #a3a97f; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--reboco); color: var(--tinta); font: 400 1rem/1.6 var(--f-texto); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--reboco); }
+.guia { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.miolo { max-width: 1180px; margin: 0 auto; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--travertino); outline-offset: 3px; }
+
+header.topo { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: color-mix(in srgb, var(--reboco) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--linha); }
+header.topo .miolo { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 12px; }
+.marca { font: 700 1rem/1 var(--f-titulo); font-stretch: 125%; letter-spacing: 0.02em; text-decoration: none; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+nav a { font: 600 0.78rem var(--f-titulo); font-stretch: 112%; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: var(--tinta-2); }
+nav a:hover { color: var(--tinta); }
+
+.capa { padding-block: 28px 0; }
+.capa figure { margin: 0; position: relative; }
+.capa img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; cursor: zoom-in; }
+.capa-texto { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; align-items: end; padding-block: 28px 8px; }
+h1 { margin: 0; font: 700 clamp(2.2rem, 5.5vw, 4.4rem)/1 var(--f-titulo); font-stretch: 125%; letter-spacing: -0.01em; text-wrap: balance; }
+h1 span { color: var(--taupe); }
+.capa-texto p { margin: 0; color: var(--tinta-2); max-width: 46ch; }
+.fichas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--tinta); margin-top: 20px; }
+.ficha { padding: 14px 16px 14px 0; border-right: 1px solid var(--linha); }
+.ficha:last-child { border-right: 0; }
+.ficha b { display: block; font: 700 1.5rem/1.1 var(--f-titulo); font-stretch: 112%; font-variant-numeric: tabular-nums; }
+.ficha small { color: var(--tinta-2); font-size: 0.82rem; }
+
+section { padding-block: 64px 8px; }
+.rotulo { font: 600 0.76rem var(--f-titulo); font-stretch: 112%; letter-spacing: 0.16em; text-transform: uppercase; color: var(--taupe); margin: 0 0 10px; }
+h2 { margin: 0 0 22px; font: 700 clamp(1.6rem, 3.2vw, 2.4rem)/1.1 var(--f-titulo); font-stretch: 118%; text-wrap: balance; }
+.intro { color: var(--tinta-2); max-width: 62ch; margin: -8px 0 26px; }
+
+.grade-fachada { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+figure.quadro { margin: 0; }
+figure.quadro img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; cursor: zoom-in; background: var(--linha); }
+figcaption { font-size: 0.85rem; color: var(--tinta-2); padding-top: 8px; }
+
+.ambiente { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 28px; padding-block: 26px; border-top: 1px solid var(--linha); align-items: start; }
+.ambiente:nth-of-type(even) .fotos { order: 2; }
+.ambiente .fotos { display: grid; gap: 12px; }
+.ambiente h3 { margin: 0 0 4px; font: 700 1.35rem/1.15 var(--f-titulo); font-stretch: 112%; }
+.area { font: 600 0.8rem var(--f-titulo); font-stretch: 112%; letter-spacing: 0.1em; color: var(--taupe); font-variant-numeric: tabular-nums; }
+.ambiente p { color: var(--tinta-2); margin: 12px 0; }
+.ambiente ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.ambiente li { padding-left: 16px; position: relative; font-size: 0.93rem; }
+.ambiente li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 7px; height: 7px; background: var(--travertino); }
+
+.areas { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.areas td { padding: 10px 0; border-bottom: 1px solid var(--linha); }
+.areas td:last-child { text-align: right; font-weight: 500; }
+.areas tr.total td { border-top: 1px solid var(--tinta); border-bottom: 0; font: 700 1.05rem var(--f-titulo); font-stretch: 112%; }
+.duas { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; }
+
+.produtos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--tinta); }
+.produto { padding: 18px 18px 18px 0; border-bottom: 1px solid var(--linha); min-width: 0; }
+.produto .onde { font: 600 0.72rem var(--f-titulo); font-stretch: 112%; letter-spacing: 0.14em; text-transform: uppercase; color: var(--taupe); }
+.produto b { display: block; font-weight: 500; margin: 6px 0 2px; }
+.produto span { color: var(--tinta-2); font-size: 0.88rem; }
+.amostras { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
+.amostra { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--tinta-2); }
+.amostra i { width: 28px; height: 28px; display: inline-block; border: 1px solid var(--linha); }
+
+.tresd { background: var(--tinta); color: var(--reboco); margin-top: 64px; }
+.tresd .miolo { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 32px; align-items: center; padding-block: 56px; }
+.tresd h2 { color: var(--reboco); }
+.tresd p { color: color-mix(in srgb, var(--reboco) 75%, var(--tinta)); margin: 0 0 22px; max-width: 52ch; }
+.botao { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; background: var(--travertino); color: #1d1c1a; text-decoration: none; font: 600 0.9rem var(--f-titulo); font-stretch: 112%; letter-spacing: 0.06em; text-transform: uppercase; }
+.botao:hover { filter: brightness(1.05); }
+.tresd ol { margin: 0; padding-left: 20px; color: color-mix(in srgb, var(--reboco) 80%, var(--tinta)); display: grid; gap: 8px; font-size: 0.93rem; }
+
+footer { padding-block: 36px 48px; color: var(--tinta-2); font-size: 0.82rem; }
+footer .miolo { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+
+#zoom { position: fixed; inset: 0; z-index: 50; background: rgba(15, 14, 12, 0.94); display: grid; place-items: center;
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); cursor: zoom-out; }
+#zoom[hidden] { display: none; }
+#zoom img { max-height: 86vh; width: auto; }
+#zoom p { color: #e9e4da; text-align: center; margin: 10px 0 0; font-size: 0.9rem; }
+
+/* Isometricas: cada ambiente visto de cima, como maquete cortada. Prancha sempre clara (as imagens sao do Revit, fundo branco). */
+.maquetes { display: grid; gap: 18px; }
+.maquete { border-top: 1px solid var(--tinta); padding-top: 14px; }
+.maquete header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.maquete h3 { margin: 0; font: 700 1.2rem/1.15 var(--f-titulo); font-stretch: 112%; }
+.maquete header span { font: 600 0.74rem var(--f-titulo); font-stretch: 112%; letter-spacing: 0.12em; text-transform: uppercase; color: var(--taupe); font-variant-numeric: tabular-nums; }
+.maquete .par { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.prancha { margin: 0; background: #ffffff; border: 1px solid var(--linha); position: relative; }
+.prancha img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; padding: 4%; cursor: zoom-in; }
+.prancha figcaption { position: absolute; left: 12px; bottom: 10px; padding: 0; font: 600 0.68rem var(--f-titulo); font-stretch: 112%; letter-spacing: 0.14em; text-transform: uppercase; color: #8c8174; }
+.maquetes .quatro { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.maquetes .quatro .maquete header { flex-direction: column; gap: 2px; }
+@media (max-width: 980px) { .maquetes .quatro { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .maquete .par { grid-template-columns: minmax(0, 1fr); } .maquetes .quatro { gap: 14px; } }
+
+/* Planta humanizada (etapa 58): imagem alta e estreita (lote 6 x 30) ao lado do texto */
+.planta { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: 40px; align-items: start; }
+.planta figure { margin: 0; background: #e2ead6; border: 1px solid var(--linha); }
+.planta img { width: 100%; height: auto; cursor: zoom-in; }
+.planta .lado { position: sticky; top: 90px; }
+.planta ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; color: var(--tinta-2); }
+/* marca-infiniti (21/10/2026): logo da INFINITI Engenharia no cabecalho e no rodape */
+.marca { display: inline-flex; align-items: center; gap: 10px; }
+.marca img, .assina img { width: 30px; height: 30px; object-fit: contain; }
+.marca .infiniti-escuro, .assina .infiniti-escuro { display: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .infiniti-claro { display: none; } :root:not([data-theme="light"]) .infiniti-escuro { display: inline; } }
+:root[data-theme="dark"] .infiniti-claro { display: none; } :root[data-theme="dark"] .infiniti-escuro { display: inline; }
+.assina { display: inline-flex; align-items: center; gap: 10px; color: var(--tinta); font-weight: 500; }
+.assina small { display: block; color: var(--tinta-2); font-weight: 400; }
+
+@media (max-width: 820px) { .planta { grid-template-columns: minmax(0, 1fr); } .planta figure { max-width: 420px; margin: 0 auto; } .planta .lado { position: static; } }
+
+@media (max-width: 820px) {
+  .capa-texto, .ambiente, .duas, .tresd .miolo { grid-template-columns: minmax(0, 1fr); }
+  .ambiente:nth-of-type(even) .fotos { order: 0; }
+  .produtos { grid-template-columns: minmax(0, 1fr); }
+  .fichas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ficha:nth-child(2) { border-right: 0; }
+  .grade-fachada { grid-template-columns: minmax(0, 1fr); }
+  nav { gap: 12px; }
+}
+@media (prefers-reduced-motion: no-preference) { .capa img { animation: entra 0.9s ease-out both; } @keyframes entra { from { opacity: 0.6; transform: scale(1.01); } to { opacity: 1; transform: none; } } }
+</style>
+</head>
+<body>
+
+<header class="topo guia">
+  <div class="miolo">
+    <a class="marca" href="#inicio"><img class="infiniti-claro" src="img/logo-infiniti.png" alt="INFINITI Engenharia"><img class="infiniti-escuro" src="img/logo-infiniti-branca.png" alt="INFINITI Engenharia"><span>Residência 83,26 m² · padrão médio</span></a>
+    <nav aria-label="Seções">
+      <a href="#fachada">Fachada</a><a href="#planta">Planta</a><a href="#ambientes">Ambientes</a><a href="#acabamentos">Acabamentos</a><a href="#padrao">Padrão médio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="capa guia" id="inicio">
+  <div class="miolo">
+    <figure><img src="img/fachada-frente.jpg" alt="Fachada frontal da residência ao entardecer, com pórtico em taupe, painel de porcelanato calacata e porta de madeira" data-legenda="Fachada frontal"></figure>
+    <div class="capa-texto">
+      <h1>Casa térrea <span>contemporânea</span> em lote 6 × 30 · padrão médio</h1>
+      <p>A mesma casa, com acabamento de padrão médio: pórtico em volume único e painel de calacata na fachada, portas de madeira frisada, janelas de vidro temperado tipo Blindex, bancadas em granito Cinza Corumbá e iluminação com spots e plafons. Bonita e bem resolvida, com produtos de linha acessível.</p>
+    </div>
+    <div class="fichas">
+      <div class="ficha"><b>83,26 m²</b><small>área construída</small></div>
+      <div class="ficha"><b>6 × 30 m</b><small>lote</small></div>
+      <div class="ficha"><b>2 quartos</b><small>1 suíte</small></div>
+      <div class="ficha"><b>2 banhos</b><small>e garagem coberta</small></div>
+    </div>
+  </div>
+</div>
+
+<section class="guia" id="fachada">
+  <div class="miolo">
+    <p class="rotulo">Fachada e acesso</p>
+    <h2>Um volume limpo, que se destaca na rua</h2>
+    <p class="intro">O pórtico emoldura a entrada e a garagem; a placa de calacata marca a parede do banho da frente. Porta de entrada em madeira frisada, janelas em vidro temperado com perfis pretos, spots de embutir no pórtico e na garagem, muros em reboco liso e canteiros de grama na rampa.</p>
+    <div class="grade-fachada">
+      <figure class="quadro"><img loading="lazy" src="img/fachada-esquerda.jpg" alt="Fachada vista pela esquerda" data-legenda="Fachada, vista pela esquerda"><figcaption>Vista pela esquerda: o pórtico, o painel de calacata e o muro lateral.</figcaption></figure>
+      <figure class="quadro"><img loading="lazy" src="img/fachada-direita.jpg" alt="Fachada vista pela direita" data-legenda="Fachada, vista pela direita"><figcaption>Vista pela direita: muro lateral e acesso.</figcaption></figure>
+      <figure class="quadro"><img loading="lazy" src="img/vista-aerea.jpg" alt="Vista aérea da casa no lote" data-legenda="Vista aérea"><figcaption>Vista aérea: implantação no lote de 6 × 30 m.</figcaption></figure>
+      <figure class="quadro"><img loading="lazy" src="img/garagem.jpg" alt="Garagem coberta e entrada da casa" data-legenda="Garagem e entrada"><figcaption>Garagem coberta (21,7 m²) com spots no forro e porta de entrada em madeira frisada. Piso em porcelanato 80 × 80 claro, acabamento natural antiderrapante, próprio para veículos.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="guia" id="planta">
+  <div class="miolo">
+    <p class="rotulo">Planta</p>
+    <h2>A casa inteira, vista de cima</h2>
+    <div class="planta">
+      <figure><img loading="lazy" src="img/planta-humanizada.jpg" alt="Planta baixa humanizada do lote 6 × 30 com a casa, a garagem, o corredor lateral e o quintal" data-legenda="Planta baixa humanizada"></figure>
+      <div class="lado">
+        <p class="intro">Planta humanizada gerada direto do modelo do padrão médio, no Revit: paredes em preto, pisos e móveis nas cores reais dos acabamentos escolhidos. Da rua para o fundo:</p>
+        <ol>
+          <li>Calçada, rampa com faixas de grama e jardim</li>
+          <li>Garagem coberta e, ao lado, o banho da suíte</li>
+          <li>Suíte e sala de estar</li>
+          <li>Banho social e lavanderia, pela circulação</li>
+          <li>Quarto</li>
+          <li>Cozinha com saída para o quintal em brita</li>
+          <li>Corredor lateral externo, do portão ao quintal</li>
+        </ol>
+        <p class="intro" style="margin-top:18px">Árvores e pessoas são ilustrativas, para dar escala.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guia" id="ambientes">
+  <div class="miolo">
+    <p class="rotulo">Ambientes</p>
+    <h2>Cada cômodo no tamanho real</h2>
+    <p class="intro">Móveis e acabamentos escolhidos para caber de verdade em cada ambiente, com circulação livre e produtos encontrados no mercado.</p>
+
+    <article class="ambiente">
+      <div class="fotos">
+        <figure class="quadro"><img loading="lazy" src="img/sala-tv.jpg" alt="Sala de estar com TV na parede, rack de madeira clara e portas de madeira frisada" data-legenda="Sala de estar, parede da TV"></figure>
+        <figure class="quadro"><img loading="lazy" src="img/sala-sofa.jpg" alt="Sala de estar com sofá de linho, quadros e luminária de piso" data-legenda="Sala de estar, sofá"></figure>
+      </div>
+      <div>
+        <h3>Sala de estar</h3><span class="area">7,1 m²</span>
+        <p>TV direto na parede, com suporte fixo, sobre rack de madeira clara; sofá compacto em linho com almofadas bege e terracota, para manter a passagem livre.</p>
+        <ul>
+          <li>Parede lisa pintada, sem painel; tomadas e ponto de TV escondidos atrás da TV</li>
+          <li>Sofá de 2 lugares, mesa lateral redonda, tapete de juta e luminária tripé</li>
+          <li>Spots de embutir 3000 K no forro de gesso</li>
+          <li>Cortina de linho em cortineiro de gesso</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ambiente">
+      <div class="fotos"><figure class="quadro"><img loading="lazy" src="img/cozinha.jpg" alt="Cozinha com geladeira, bancada de granito cinza sobre mãos-francesas, cuba, cooktop e mesa redonda" data-legenda="Cozinha"></figure></div>
+      <div>
+        <h3>Cozinha</h3><span class="area">10,0 m²</span>
+        <p>Cozinha simples e funcional, sem armários planejados: bancada de granito Cinza Corumbá apoiada em mãos-francesas de aço preto, com cuba de inox e cooktop embutidos. O espaço embaixo fica livre para o morador escolher os móveis depois.</p>
+        <ul>
+          <li>Bancada de 1,85 × 0,60 m com frontão, cuba de inox e cooktop 4 bocas</li>
+          <li>Torneira de mesa com bica flexível de silicone</li>
+          <li>Geladeira solta e mesa redonda com 4 cadeiras</li>
+          <li>Parede da bancada em porcelanato claro até o forro</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ambiente">
+      <div class="fotos"><figure class="quadro"><img loading="lazy" src="img/quarto.jpg" alt="Quarto com parede bege atrás da cama, quadros e criados brancos" data-legenda="Quarto"></figure><figure class="quadro"><img loading="lazy" src="img/quarto-tv.jpg" alt="Quarto com TV na parede e porta de madeira frisada" data-legenda="Quarto, parede da TV"></figure><figure class="quadro"><img loading="lazy" src="img/suite.jpg" alt="Suíte com parede bege atrás da cama e janela de vidro temperado" data-legenda="Suíte"></figure><figure class="quadro"><img loading="lazy" src="img/suite-tv.jpg" alt="Suíte com TV na parede" data-legenda="Suíte, parede da TV"></figure></div>
+      <div>
+        <h3>Quartos</h3><span class="area">quarto 7,7 m² · suíte 9,2 m²</span>
+        <p>Parede da cabeceira pintada em bege-areia do piso ao forro, cama em madeira clara, criados brancos e quadros em tons neutros. A TV fica direto na parede, com suporte fixo. A luz vem de um plafon LED quadrado no forro.</p>
+        <ul>
+          <li>Tomadas de cabeceira na parede, ao lado de cada criado</li>
+          <li>Guarda-roupa de correr</li>
+          <li>Blackout e voil em cortineiro de gesso</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ambiente">
+      <div class="fotos"><figure class="quadro"><img loading="lazy" src="img/banho-suite.jpg" alt="Banho da suíte com bancada de granito cinza, cuba oval e espelho simples" data-legenda="Banho da suíte"></figure><figure class="quadro"><img loading="lazy" src="img/banho-social.jpg" alt="Banho social com bancada de granito cinza e parede do box em porcelanato escuro" data-legenda="Banho social"></figure></div>
+      <div>
+        <h3>Banheiros</h3><span class="area">suíte 3,4 m² · social 3,5 m²</span>
+        <p>Bancada suspensa em granito Cinza Corumbá com cuba oval de louça embutida, torneira de mesa cromada e espelho lapidado. Vaso com caixa acoplada e metais cromados.</p>
+        <ul>
+          <li>Cuba oval de embutir 49 × 36 cm e torneira de bica alta cromada</li>
+          <li>Paredes em porcelanato claro marmorizado; piso acetinado, nunca polido em área molhada</li>
+          <li>Chuveiro Lorenzetti Acqua Duo e plafon LED quadrado no forro</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="ambiente">
+      <div class="fotos"><figure class="quadro"><img loading="lazy" src="img/lavanderia.jpg" alt="Lavanderia com tanque duplo cinza, duas torneiras e lavadora branca" data-legenda="Lavanderia"></figure><figure class="quadro"><img loading="lazy" src="img/circulacao.jpg" alt="Circulação com spots no forro e portas de madeira frisada" data-legenda="Circulação"></figure></div>
+      <div>
+        <h3>Lavanderia e circulação</h3><span class="area">lavanderia 3,5 m² · circulação 7,1 m²</span>
+        <p>Tanque duplo de mármore sintético suspenso na parede, com uma torneira para cada cuba, e lavadora de abrir por cima. Na circulação, spots no forro e portas de madeira frisada.</p>
+        <ul>
+          <li>Tanque duplo 1,20 × 0,60 em cinza</li>
+          <li>Armário aéreo sobre o tanque</li>
+          <li>Parede molhada em porcelanato claro; demais paredes pintadas, com rodapé</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="guia" id="acabamentos">
+  <div class="miolo">
+    <p class="rotulo">Acabamentos e produtos</p>
+    <h2>Materiais reais, com marca e medida</h2>
+    <div class="amostras" aria-label="Paleta da casa">
+      <span class="amostra"><i style="background:#f5f2ec"></i>Reboco off-white</span>
+      <span class="amostra"><i style="background:#8c8174"></i>Pórtico taupe</span>
+      <span class="amostra"><i style="background:#a9a7a2"></i>Granito Cinza Corumbá</span>
+      <span class="amostra"><i style="background:#b0703e"></i>Madeira das portas</span>
+      <span class="amostra"><i style="background:#1d1c1a"></i>Perfis pretos e metais cromados</span>
+      <span class="amostra"><i style="background:#d9c7a7"></i>Bege-areia (cabeceiras)</span>
+    </div>
+    <div class="produtos">
+      <div class="produto"><span class="onde">Portas</span><b>Kit porta pronta de madeira frisada</b><span>Folha com frisos horizontais, guarnição de 5 cm, maçaneta cromada de roseta quadrada</span></div>
+      <div class="produto"><span class="onde">Janelas</span><b>Tipo Blindex, vidro temperado 8 mm</b><span>2 folhas de correr, perfis de alumínio preto (ref. Maanaim)</span></div>
+      <div class="produto"><span class="onde">Bancadas</span><b>Granito Cinza Corumbá</b><span>Cozinha e banheiros, polido</span></div>
+      <div class="produto"><span class="onde">Banheiros</span><b>Cuba oval de embutir Icasa</b><span>Torneira de mesa Docol cromada, espelho lapidado</span></div>
+      <div class="produto"><span class="onde">Louças</span><b>Vaso com caixa acoplada 3/6 L</b><span>Linha econômica (Celite ou Incepa)</span></div>
+      <div class="produto"><span class="onde">Chuveiro</span><b>Lorenzetti Acqua Duo Ultra</b><span>Quadrado, branco</span></div>
+      <div class="produto"><span class="onde">Lavanderia</span><b>Tanque duplo de mármore sintético 120 × 60</b><span>Ref. Decoralita, 2 torneiras de parede cromadas</span></div>
+      <div class="produto"><span class="onde">Interruptores e tomadas</span><b>Tramontina Liz branco</b><span>Placas 4 × 2 e 4 × 4, tomadas no padrão brasileiro</span></div>
+      <div class="produto"><span class="onde">Iluminação</span><b>Stella: spots 3000 K e plafon LED quadrado</b><span>Spots na sala, cozinha, circulação e garagem; plafons nos quartos, banhos e lavanderia</span></div>
+      <div class="produto"><span class="onde">Peitoris e soleiras</span><b>Granito preto São Gabriel</b><span>Com pingadeira</span></div>
+      <div class="produto"><span class="onde">Fachada</span><b>Porcelanato calacata</b><span>Painel do banho da frente</span></div>
+      <div class="produto"><span class="onde">Cozinha</span><b>Torneira de bica flexível</b><span>Silicone preto, corpo cromado</span></div>
+    </div>
+    <div class="duas" style="margin-top:44px">
+      <div>
+        <p class="rotulo">Quadro de áreas</p>
+        <table class="areas">
+          <tr><td>Garagem coberta</td><td>21,7 m²</td></tr>
+          <tr><td>Cozinha</td><td>10,0 m²</td></tr>
+          <tr><td>Suíte</td><td>9,2 m²</td></tr>
+          <tr><td>Quarto</td><td>7,7 m²</td></tr>
+          <tr><td>Estar</td><td>7,1 m²</td></tr>
+          <tr><td>Circulação</td><td>7,1 m²</td></tr>
+          <tr><td>Banho social</td><td>3,5 m²</td></tr>
+          <tr><td>Lavanderia</td><td>3,5 m²</td></tr>
+          <tr><td>Banho da suíte</td><td>3,4 m²</td></tr>
+          <tr class="total"><td>Área construída</td><td>83,26 m²</td></tr>
+        </table>
+      </div>
+      <div>
+        <p class="rotulo">Como o projeto é feito</p>
+        <p class="intro" style="margin:0">Todo o projeto é desenvolvido em modelo BIM (Revit): paredes, estrutura, hidráulica, elétrica e móveis com medidas reais. As imagens são geradas a partir desse modelo, com acabamento fotorrealista. Os produtos citados têm ficha e fornecedor identificados, o que permite montar a lista de compras item por item.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tresd guia" id="padrao">
+  <div class="miolo">
+    <div>
+      <p class="rotulo" style="color:var(--travertino)">Padrão médio</p>
+      <h2>A mesma casa, com acabamento acessível</h2>
+      <p>A planta, a fachada e a estrutura são as mesmas do padrão alto. O que muda está nos acabamentos e nos produtos, escolhidos em linhas mais em conta, mas sem abrir mão de uma casa bonita.</p>
+    </div>
+    <ol>
+      <li>Portas de madeira frisada e janelas de vidro temperado tipo Blindex.</li>
+      <li>Iluminação com spots e plafons LED, sem fitas de LED.</li>
+      <li>Cozinha sem planejados: bancada de granito com cuba e cooktop.</li>
+      <li>Banheiros com bancada de granito Cinza Corumbá e cuba oval.</li>
+      <li>Lavanderia com tanque duplo e lavadora simples.</li>
+      <li>Quartos e sala sem painéis, ripados nem marcenaria.</li>
+      <li>Interruptores e tomadas convencionais, sem automação.</li>
+    </ol>
+  </div>
+</div>
+</main>
+
+<footer class="guia">
+  <div class="miolo">
+    <span class="assina"><img class="infiniti-claro" src="img/logo-infiniti.png" alt=""><img class="infiniti-escuro" src="img/logo-infiniti-branca.png" alt=""><span>INFINITI Engenharia e Construtora Ltda.<small>Ariquemes-RO · projeto e construção</small></span></span>
+    <span>Residência 83,26 m² · padrão médio · estudo de projeto</span>
+    <span>Imagens ilustrativas produzidas a partir do modelo do projeto, com acabamento por inteligência artificial. Medidas e especificações finais no projeto executivo.</span>
+  </div>
+</footer>
+
+<div id="zoom" hidden><div><img alt=""><p></p></div></div>
+<script>
+(function () {
+  var z = document.getElementById("zoom"), zi = z.querySelector("img"), zp = z.querySelector("p");
+  document.querySelectorAll("img[data-legenda]").forEach(function (im) {
+    im.addEventListener("click", function () { zi.src = im.src; zi.alt = im.alt; zp.textContent = im.dataset.legenda; z.hidden = false; });
+  });
+  z.addEventListener("click", function () { z.hidden = true; });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") z.hidden = true; });
+})();
+</script>
+
+</body>
+</html>
